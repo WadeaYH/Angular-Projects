@@ -1,0 +1,35 @@
+<header>
+  <h1>{{storeName}}</h1>
+  <p>{{storeDescription}}</p>
+  <p>{{storeAddress}} | Currency: {{currency}} | Products in store: {{totalProducts}}</p>
+  <h2>{{message}}</h2>
+</header>
+
+<main>
+  <section>
+    <h2>Featured Product</h2>
+    <h3>{{featuredProduct.name}}</h3>
+    <p>{{featuredProduct.description}}</p>
+    <p>
+      <s>${{featuredProduct.price}}</s>
+      <b id="ans">${{finalPrice}}</b>
+      {{discountPercentage}}% Discount
+    </p>
+  </section>
+
+  <section>
+    <h2>Our Products</h2>
+    <p>{{productNames[0]}} : ${{productPrices[0]}}</p>
+    <p>{{productNames[1]}} : ${{productPrices[1]}}</p>
+    <p>{{productNames[2]}} : ${{productPrices[2]}}</p>
+    <p>{{productNames[3]}} : ${{productPrices[3]}}</p>
+  </section>
+
+  <section>
+    <h2>Store Summary</h2>
+    <p>Total Products: {{totalNumberOfProducts}}</p>
+    <p>Highest Price: ${{mostExpensiveProductPrice}}</p>
+    <p>Lowest Price: ${{cheapestProductPrice}}</p>
+    <p>Total Products Value: ${{totalValue}}</p>
+  </section>
+</main>

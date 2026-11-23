@@ -1,0 +1,15 @@
+header{
+    color: white;
+}
+
+main{
+    color: white;
+}
+
+body, main, header{
+    background-color: black;
+}
+
+#ans{
+    color: red;
+}
