@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 
+
 export interface FeaturedProduct{
   name: string;
   price: number;

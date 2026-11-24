@@ -1,0 +1,22 @@
+<p>products works!</p>
+
+<h1>Our Products</h1>
+
+<h2>{{productName}}</h2>
+
+<p>{{price}}</p>
+
+<img [src]="imgUrl" (mouseover) = "picMeow()" height="100px" width="100px" />
+
+<br><br><br><br><br><br>
+
+<button [disabled]="isDisabled" (click)="increase()">Buy Now</button>
+
+<br><br><br><br><br>
+
+<h1>You clicked {{times}} times!</h1>
+
+<br><br>
+
+<input [(ngModel)]="userName">
+<h2>Hello {{userName}} 👋!</h2>

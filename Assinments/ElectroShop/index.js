@@ -11,7 +11,7 @@ let products = [
     { name: "Laptop", price: 999, inStock: true, quantity: 5 },
     { name: "Headphones", price: 199, inStock: false, quantity: 0 },
     { name: "Smartwatch", price: 299, inStock: true, quantity: 15 },
-    { name: "Camera", price: 499, inStock: true, quantity: 8 }
+    { name: "Camera", price: 50, inStock: true, quantity: 8 }
 ];
 if (currentlyOpen) {
     console.log(`${storeName} is currently open!`);
