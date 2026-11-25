@@ -1,3 +1,4 @@
+import { Product } from './product-list-component/product-list-component';
 import { Component, signal } from '@angular/core';
 
 
@@ -16,6 +17,36 @@ export interface FeaturedProduct{
 
 
 export class App {
+
+  productName = signal("Laptop");
+  productDescription = signal("Dell Laptop, Core i7, 16GB RAM");
+  productPrice = signal(850);
+  isAvailable = signal(true);
+
+  cartName = signal("");
+  cartPrice = signal(0);
+  cartQuantity = signal(0);
+
+  addToCart(name: string, quantity: number){
+    this.cartName.set(name);
+    this.cartPrice.set(this.productPrice());
+    this.cartQuantity.set(quantity);
+  }
+
+  showLaptop(){
+    this.productName.set("Laptop");
+    this.productDescription.set("Dell Laptop, Core i7, 16GB RAM");
+    this.productPrice.set(850);
+    this.isAvailable.set(true);
+  }
+
+  showHeadphones(){
+    this.productName.set("Wireless Headphones");
+    this.productDescription.set("Bluetooth Headphones");
+    this.productPrice.set(120);
+    this.isAvailable.set(true);
+  }
+
   protected readonly title = signal('ElectroShop');
 
   storeName: string = "ElectroShop";

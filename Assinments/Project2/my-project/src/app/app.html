@@ -1,59 +1,18 @@
-<!-- <header>
-  <h1>{{storeName}}</h1>
-  <p>{{storeDescription}}</p>
-  <p>{{storeAddress}} | Currency: {{currency}} | Products in store: {{totalProducts}}</p>
-  <h2>{{message}}</h2>
-</header>
+<h1>ELECTROSHOP</h1>
 
-<main>
-  <section>
-    <h2>Featured Product</h2>
-    <h3>{{featuredProduct.name}}</h3>
-    <p>{{featuredProduct.description}}</p>
-    <p>
-      <s>${{featuredProduct.price}}</s>
-      <b id="ans">${{finalPrice}}</b>
-      {{discountPercentage}}% Discount
-    </p>
-  </section>
+<button (click)="showLaptop()">Show Laptop</button>
+<button (click)="showHeadphones()">Show Wireless Headphones</button>
 
-  <section>
-    <h2>Our Products</h2>
-    <p>{{productNames[0]}} : ${{productPrices[0]}}</p>
-    <p>{{productNames[1]}} : ${{productPrices[1]}}</p>
-    <p>{{productNames[2]}} : ${{productPrices[2]}}</p>
-    <p>{{productNames[3]}} : ${{productPrices[3]}}</p>
-  </section>
+<app-product-details-component
+  [productName]="productName()"
+  [productDescription]="productDescription()"
+  [productPrice]="productPrice()"
+  [isAvailable]="isAvailable()"
+  (cartAdded)="addToCart($event.name, $event.quantity)">
+</app-product-details-component>
 
-  <section>
-    <h2>Store Summary</h2>
-    <p>Total Products: {{totalNumberOfProducts}}</p>
-    <p>Highest Price: ${{mostExpensiveProductPrice}}</p>
-    <p>Lowest Price: ${{cheapestProductPrice}}</p>
-    <p>Total Products Value: ${{totalValue}}</p>
-  </section>
-</main>
-
-<app-products></app-products> -->
-
-<app-navbar-component></app-navbar-component>
-
-<app-header-component></app-header-component>
-
-<app-product-list-component></app-product-list-component>
-
-<app-product-details-component></app-product-details-component>
-
-<app-footer-component></app-footer-component>
-
-
-
-
-
-
-
-
-
-
-
-
+<app-shopping-cart-component
+  [productName]="cartName()"
+  [productPrice]="cartPrice()"
+  [quantity]="cartQuantity()">
+</app-shopping-cart-component>

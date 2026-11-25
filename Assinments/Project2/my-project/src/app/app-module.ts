@@ -9,6 +9,9 @@ import { NavbarComponent } from './navbar-component/navbar-component';
 import { ProductListComponent } from './product-list-component/product-list-component';
 import { ProductDetailsComponent } from './product-details-component/product-details-component';
 import { FooterComponent } from './footer-component/footer-component';
+import { TestComp } from './test-comp/test-comp';
+import { BetaComp } from './beta-comp/beta-comp';
+import { ShoppingCartComponent } from './shopping-cart-component/shopping-cart-component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { FooterComponent } from './footer-component/footer-component';
     ProductListComponent,
     ProductDetailsComponent,
     FooterComponent,
+    TestComp,
+    BetaComp,
+    ShoppingCartComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, CoffeeCard, Products],
   providers: [provideBrowserGlobalErrorListeners(), provideClientHydration()],
